@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Hatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Pixel Shake Animation */
+      @keyframes pixel-shake {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(-4px, 0); }
+        50% { transform: translate(4px, 0); }
+        75% { transform: translate(-4px, 0); }
+        100% { transform: translate(0, 0); }
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .animate-pixel-shake {
+        animation: pixel-shake 0.2s steps(2) infinite;
+      }
+      
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Disable double-tap zoom on mobile */
+      body {
+        touch-action: manipulation;
+        font-family: 'Courier New', Courier, monospace; 
+        image-rendering: pixelated;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#e6e2d3] text-[#4a4a4a] select-none overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Pixel Hatch",
+  "description": "A minimalist, zero-dependency pixel pet hatching toy. Click the egg to hatch a new friend.",
+  "requestFramePermissions": []
+}
